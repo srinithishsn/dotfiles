@@ -19,6 +19,7 @@ cask_args appdir: '/Applications', no_quarantine: true
 # java_present = system('/usr/libexec/java_home --failfast')
 is_arm = Hardware::CPU.arm?
 
+tap 'homebrew/services'
 tap 'romkatv/powerlevel10k'
 
 brew 'bash'
@@ -27,43 +28,28 @@ brew 'btop'
 brew 'curl'
 brew 'diff-so-fancy'
 brew 'direnv'
-# brew 'dive'   # docker layers inspection on steroids
-# brew 'docker-diff'
-# brew 'docker-slim'  # TODO: investigate if the http-probe is a deal-breaker
+brew 'edencommon'
 brew 'eza'
-# brew 'fzy'
-# brew 'git-crypt'
+brew 'fb303'
+brew 'fbthrift'
+brew 'fizz'
+brew 'folly'
+brew 'gawk'
 brew 'git-extras'
 brew 'git-gui'
+brew 'git-secret'
 brew 'git-tools'
 brew 'git'
-# brew 'gradle'
-# brew 'gradle-completion'
-# brew 'hadolint'     # lint Dockerfiles (similar to shellcheck for shell scripts)
-brew 'jq'
-# brew 'kubernetes-cli', link: true   # Note: Had to do this: rm /usr/local/bin/kubectl && brew link --overwrite kubernetes-cli
-# brew 'kubernetes-helm'
+brew 'gnupg'
+brew 'harfbuzz'
+brew 'ios-deploy'
 brew 'less'
-# brew 'libressl', link: true
-# brew 'localstack'
-# brew 'make'
 brew 'mise'
-brew 'moreutils'
-brew 'ncdu'
-# brew 'pkgdiff'
+brew 'mysql', restart_service: true
 brew 'powerlevel10k'
 brew 'prettyping'
-# brew 'reattach-to-user-namespace' # Needed if using tmux (to be able to access the macos clipboard from within tmux)
-brew 'ripgrep'
-brew 'shellcheck'
-# brew 'speedtest-cli'
-brew 'syncthing'
-brew 'tldr'
-# brew 'tmux'
-brew 'vim'
-brew 'watch'
-brew 'wget'
-brew 'wifi-password'
+brew 'wangle'
+brew 'watchman'
 brew 'zsh'
 
 # ----------------------------------------------------------------------------------------------------------
@@ -72,44 +58,35 @@ mas 'iBar-Menubar icon control tool', id: 6443843900
 # mas 'Command X', id: 6448461551
 
 # ----------------------------------------------------------------------------------------------------------
+# cask 'ngrok'
+# cask 'ollama'
 cask 'aldente'
-# cask 'apparency'
+cask 'android-studio'
 cask 'appcleaner'
-cask 'arc'
-cask 'brave-browser@nightly'
+cask 'asana'
 cask 'clocker'
-cask 'cloudflare-warp'
-# cask 'dbeaver-community'
-# cask 'dupeguru'
-cask 'firefox@nightly' #, greedy: true
+cask 'figma'
+cask 'firefox'
+cask 'flipper'
 cask 'font-meslo-lg-nerd-font'
-# cask 'git-credential-manager'  # https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
-# cask 'intellij-idea-ce'
+cask 'fontfinagler'
+cask 'google-chrome'
+cask 'insomnia'
+cask 'intellij-idea'
 cask 'iterm2'
 cask 'itsycal'
-# cask 'kdiff3'
-cask 'keepassxc@beta'
 cask 'keepingyouawake'
 cask 'keybase'
-# cask 'keycastr'
-cask 'libreoffice'
-# cask 'licecap'
-# cask 'lulu'
+cask 'microsoft-office'
 cask 'monolingual'
-# cask 'netspot'
-# cask 'ngrok'
+cask 'mysqlworkbench'
 cask 'notunes'
-cask 'ollama'
-# cask 'onyx'  # Commented out since I'm on the beta version of macos
-cask 'protonvpn'
 cask 'rancher'
 cask 'raycast'
-cask 'silicon' if is_arm
+cask 'spotify'
 cask 'stats'
-# cask 'tempbox'
-cask 'the-unarchiver'
-cask 'thunderbird@daily'  # TODO: Commented out since I haven't opened TBird for the past 6 months - maybe its time to let go
-cask 'vscodium@insiders'   # TODO: Doesn't handle 'Remote Containers' and GH-based auto-syncing when comparing to VSCode
+cask 'tableplus'
+cask 'vscodium'
 cask 'zoom'
 
 # VSCode extensions
@@ -148,8 +125,6 @@ if is_vscode_installed
   vscode 'vscjava.vscode-java-debug'
   vscode 'vscjava.vscode-java-pack'
   vscode 'vscjava.vscode-java-test'
-  # This is failing on different machines
-  # vscode 'vscjava.vscode-lombok'
   vscode 'vscode-icons-team.vscode-icons'
   vscode 'wayou.vscode-todo-highlight'
   vscode 'wholroyd.jinja'

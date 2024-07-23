@@ -79,6 +79,7 @@ __pycache__
 /.config/gatsby/config.json
 /.config/gatsby/events.json
 /.config/gatsby/sites/
+/.config/gcloud/virtenv
 /.config/git/gitk
 /.config/iterm2/AppSupport
 /.config/jgit/config
@@ -101,9 +102,11 @@ __pycache__
 /.dvdcss
 /.eclipse/**/cache
 /.electron
+/.emulator_console_auth_token
 /.equo/
 /.erlang-history/
 /.esd_auth
+/.expo/ios-simulator-app-cache
 /.fig.dotfiles.bak/
 /.fig/
 /.fontconfig
@@ -140,6 +143,7 @@ __pycache__
 /.mono/registry/
 /.nchsoftware
 /.nix-profile
+/.node_repl_history
 /.npm
 /.oh-my-zsh
 /.ollama/
@@ -153,6 +157,8 @@ __pycache__
 /.pnpm-state/pnpm-state.json
 /.pnpm-store/
 /.pulse*
+/.pyenv
+/.python_history
 /.recently-used.xbel
 /.rnd
 /.RSA/
@@ -207,6 +213,7 @@ __pycache__
 /Documents/
 /Downloads/
 /go/pkg/
+/java_error*.hprof
 /Google\ Drive
 /Google\ Drive\ File\ Stream
 /Library/
@@ -246,6 +253,8 @@ tmp/
 /.bashrc
 /.config/bat/config
 /.config/btop/btop.conf
+/.config/gcloud/
+/.config/yarn/
 /.cshrc
 /.curlrc
 /.default-gems
@@ -253,6 +262,7 @@ tmp/
 /.envrc
 /.erdconfig
 /.eslintrc.js
+/.expo/
 /.gemrc
 /.gitattributes
 /.gitconfig
@@ -266,6 +276,8 @@ tmp/
 /.mailrc
 /.notify-osd
 /.npmrc
+/.nvm/
+/.ollama/
 /.p10k.zsh
 /.profile
 /.pryrc

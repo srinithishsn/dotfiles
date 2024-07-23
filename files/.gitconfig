@@ -7,7 +7,7 @@
 
 # Note: Even though this will show up twice in `git config -l` - it will still be overridden based on the order of the includeIf lines below (last matching configuration wins)
 [includeIf "gitdir/i:~/"]             # Personal
-  path = ~/.gitconfig-oss.inc         # Personal
+  path = ~/.gitconfig-personal
 [alias]
   # print the current directory from the context
   currentDir = rev-parse --show-toplevel

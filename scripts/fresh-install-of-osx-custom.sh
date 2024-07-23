@@ -35,9 +35,6 @@ if non_zero_string "${KEYBASE_USERNAME}" && non_zero_string "${KEYBASE_HOME_REPO
 
   # Reset ssh keys' permissions so that git doesn't complain when using them
   sudo chmod -R 600 "${HOME}"/.ssh/* || true
-
-  # Fix /etc/hosts file to block facebook #
-  sudo cp "${PERSONAL_BIN_DIR}/macos/etc.hosts" /etc/hosts
 else
   warn "skipping cloning of home repo since either the 'KEYBASE_USERNAME' and/or the 'KEYBASE_HOME_REPO_NAME' env vars haven't been set or a git repo is already present in '${HOME}'"
 fi
